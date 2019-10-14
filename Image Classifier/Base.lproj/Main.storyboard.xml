@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+        <array key="Papyrus.ttc">
+            <string>Papyrus</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Image_Classifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-qimg-b11429713f76816ddfa65eb2671e9ca9.png" translatesAutoresizingMaskIntoConstraints="NO" id="MPZ-yF-bjU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MPZ-yF-bjU" secondAttribute="height" multiplier="1:1" id="xOH-X8-o3q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select an image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="960-v4-J5Y">
+                                <rect key="frame" x="0.0" y="403" width="375" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.59209048750000004" green="0.59219515320000005" blue="0.59208387139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkn-Zf-9ZC">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.12549019610000001" green="0.64705882349999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Bq-Id-YcG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Change Picture"/>
+                                <connections>
+                                    <action selector="onChangePictureButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ha5-RD-N6U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUs-5p-vgC">
+                                <rect key="frame" x="290" y="573" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="About us"/>
+                                <connections>
+                                    <segue destination="jm0-lr-0y4" kind="show" id="zfb-v1-0OT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="960-v4-J5Y" firstAttribute="leading" secondItem="MPZ-yF-bjU" secondAttribute="leading" id="4SB-jO-E6h"/>
+                            <constraint firstItem="MPZ-yF-bjU" firstAttribute="top" secondItem="NFa-jT-QH6" secondAttribute="top" id="S4t-yw-o8r"/>
+                            <constraint firstItem="960-v4-J5Y" firstAttribute="top" secondItem="MPZ-yF-bjU" secondAttribute="bottom" constant="8" id="WIN-XY-AWP"/>
+                            <constraint firstItem="960-v4-J5Y" firstAttribute="trailing" secondItem="MPZ-yF-bjU" secondAttribute="trailing" id="YDl-dY-RyT"/>
+                            <constraint firstItem="NFa-jT-QH6" firstAttribute="trailing" secondItem="nkn-Zf-9ZC" secondAttribute="trailing" id="b28-OS-hUS"/>
+                            <constraint firstItem="MPZ-yF-bjU" firstAttribute="leading" secondItem="NFa-jT-QH6" secondAttribute="leading" id="epo-Fd-12t"/>
+                            <constraint firstItem="nkn-Zf-9ZC" firstAttribute="leading" secondItem="NFa-jT-QH6" secondAttribute="leading" id="hH1-Sh-tkl"/>
+                            <constraint firstItem="NFa-jT-QH6" firstAttribute="trailing" secondItem="MPZ-yF-bjU" secondAttribute="trailing" id="mSJ-9n-y57"/>
+                            <constraint firstItem="NFa-jT-QH6" firstAttribute="bottom" secondItem="nkn-Zf-9ZC" secondAttribute="bottom" id="n4D-h3-d6n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NFa-jT-QH6"/>
+                    </view>
+                    <connections>
+                        <outlet property="changePictureButton" destination="nkn-Zf-9ZC" id="4GQ-7H-neK"/>
+                        <outlet property="imageView" destination="MPZ-yF-bjU" id="cwf-l1-r2M"/>
+                        <outlet property="resultLabel" destination="960-v4-J5Y" id="NbP-Xt-ybd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VbW-WQ-cco">
+            <objects>
+                <viewController id="jm0-lr-0y4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wBd-iV-jm8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MLU-0e-aUB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="230"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="Mgf-nX-bvt"/>
+                                </constraints>
+                                <string key="text">HORAMA                                                                              Horama is a Machine Learning firm, targetting to make ML accessible for everyone. Founded on 2000, it uses many ML algorithms to mainly develop image recognition applications.</string>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfW-A2-NDW">
+                                <rect key="frame" x="22" y="581" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="zDE-0X-9SK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horama_owler_20160708_104453_original.png" translatesAutoresizingMaskIntoConstraints="NO" id="ss5-DO-Ray">
+                                <rect key="frame" x="76" y="258" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MWe-mN-ENT" firstAttribute="bottom" secondItem="dfW-A2-NDW" secondAttribute="bottom" constant="56" id="A8B-9t-xqB"/>
+                            <constraint firstItem="MLU-0e-aUB" firstAttribute="leading" secondItem="wBd-iV-jm8" secondAttribute="leading" id="Ak1-ce-KRe"/>
+                            <constraint firstItem="ss5-DO-Ray" firstAttribute="leading" secondItem="MWe-mN-ENT" secondAttribute="leading" constant="76" id="EsG-OF-pUa"/>
+                            <constraint firstAttribute="trailing" secondItem="MLU-0e-aUB" secondAttribute="trailing" id="SfW-3L-ZNH"/>
+                            <constraint firstItem="MWe-mN-ENT" firstAttribute="bottom" secondItem="ss5-DO-Ray" secondAttribute="bottom" constant="281" id="X4B-ei-GeP"/>
+                            <constraint firstItem="ss5-DO-Ray" firstAttribute="centerX" secondItem="MLU-0e-aUB" secondAttribute="centerX" constant="8.5" id="dEV-SF-pZI"/>
+                            <constraint firstItem="MLU-0e-aUB" firstAttribute="top" secondItem="MWe-mN-ENT" secondAttribute="top" id="j1b-Yq-odl"/>
+                            <constraint firstItem="dfW-A2-NDW" firstAttribute="leading" secondItem="MWe-mN-ENT" secondAttribute="leading" constant="22" id="lbH-VE-CBH"/>
+                            <constraint firstItem="ss5-DO-Ray" firstAttribute="top" secondItem="MLU-0e-aUB" secondAttribute="bottom" constant="8" symbolic="YES" id="t2k-34-aBd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MWe-mN-ENT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38P-rA-axs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.79999999999995" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="horama_owler_20160708_104453_original.png" width="366" height="206"/>
+        <image name="main-qimg-b11429713f76816ddfa65eb2671e9ca9.png" width="577" height="524"/>
+    </resources>
+</document>
